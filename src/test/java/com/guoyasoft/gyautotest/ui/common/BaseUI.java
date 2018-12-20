@@ -42,7 +42,8 @@ public class BaseUI {
 				ChromeOptions options = new ChromeOptions();
 				// 最大化浏览器
 				options.addArguments("--test-type", "--start-maximized");
-				// options.setBinary("C:/XXXXXXX/chrome.exe");
+
+		options.setBinary("C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 				// 打开浏览器
 				driver = new ChromeDriver(options);
 				driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -88,6 +89,7 @@ public class BaseUI {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Can't save screenshot");
+
 			e.printStackTrace();
 		} finally {
 			System.out.println("screen shot finished");
